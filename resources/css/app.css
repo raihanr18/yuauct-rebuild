@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* YuAUCT Color Palette */
+:root {
+    --primary-blue: #0A2440;
+    --accent-gold: #B7892B;
+    --neutral-gray: #F0F0F0;
+    --text-charcoal: #333333;
+}
+
+/* Custom styles for YuAUCT */
+@layer components {
+    .btn-primary {
+        @apply bg-[#0A2440] hover:bg-[#083055] text-white font-medium py-2 px-4 rounded transition-colors duration-200;
+    }
+    
+    .btn-accent {
+        @apply bg-[#B7892B] hover:bg-[#a17925] text-white font-medium py-2 px-4 rounded transition-colors duration-200;
+    }
+    
+    .btn-secondary {
+        @apply bg-gray-500 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded transition-colors duration-200;
+    }
+    
+    .text-primary {
+        @apply text-[#0A2440];
+    }
+    
+    .text-accent {
+        @apply text-[#B7892B];
+    }
+    
+    .text-charcoal {
+        @apply text-[#333333];
+    }
+    
+    .bg-primary {
+        @apply bg-[#0A2440];
+    }
+    
+    .bg-accent {
+        @apply bg-[#B7892B];
+    }
+    
+    .bg-neutral {
+        @apply bg-[#F0F0F0];
+    }
+    
+    .border-primary {
+        @apply border-[#0A2440];
+    }
+    
+    .border-accent {
+        @apply border-[#B7892B];
+    }
+    
+    .card {
+        @apply bg-white rounded-lg shadow-md overflow-hidden border border-gray-200;
+    }
+    
+    .card-body {
+        @apply p-6;
+    }
+    
+    .navbar {
+        @apply bg-primary text-white shadow-lg;
+    }
+    
+    .footer {
+        @apply bg-primary text-white;
+    }
+    
+    .auction-card {
+        @apply card hover:shadow-lg transition-shadow duration-200;
+    }
+    
+    .countdown-timer {
+        @apply text-red-600 font-bold text-sm;
+    }
+    
+    .bid-amount {
+        @apply text-accent font-bold text-lg;
+    }
+    
+    .winner-badge {
+        @apply bg-accent text-white px-2 py-1 rounded-full text-xs font-medium;
+    }
+    
+    .status-badge {
+        @apply px-2 py-1 rounded-full text-xs font-medium;
+    }
+    
+    .status-pending {
+        @apply bg-yellow-100 text-yellow-800;
+    }
+    
+    .status-open {
+        @apply bg-green-100 text-green-800;
+    }
+    
+    .status-closed {
+        @apply bg-gray-100 text-gray-800;
+    }
+    
+    /* Auction detail page specific styles */
+    .auction-detail-grid {
+        @apply grid grid-cols-1 lg:grid-cols-3 gap-8;
+    }
+    
+    .auction-sidebar-card {
+        @apply bg-white rounded-lg shadow-md overflow-hidden mb-6;
+    }
+    
+    .auction-sidebar-header {
+        @apply p-4 bg-gradient-to-r text-white;
+    }
+    
+    .auction-info-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600;
+    }
+    
+    .bid-stats-grid {
+        @apply grid grid-cols-2 gap-4 mb-6 text-center;
+    }
+    
+    .bid-stat-card {
+        @apply p-3 rounded-lg;
+    }
+    
+    .current-bid-display {
+        @apply text-center mb-6 p-4 bg-gradient-to-r from-yellow-50 to-blue-50 rounded-lg border border-yellow-200;
+    }
+    
+    .countdown-display {
+        @apply text-center mb-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200;
+    }
+    
+    .auction-ended-display {
+        @apply text-center mb-6 p-4 bg-red-50 rounded-lg border border-red-200;
+    }
+    
+    .bid-form-container {
+        @apply space-y-4;
+    }
+    
+    .bid-minimum-info {
+        @apply mb-3 p-3 bg-blue-50 rounded-lg border border-blue-200;
+    }
+    
+    .bid-input {
+        @apply w-full pl-12 pr-3 py-3 border-2 rounded-lg focus:border-accent focus:ring-accent transition duration-200;
+    }
+    
+    .bid-history-item {
+        @apply flex items-center justify-between p-4 bg-gray-50 rounded-lg border;
+    }
+    
+    .bid-history-item.highest {
+        @apply border-accent bg-yellow-50;
+    }
+    
+    .user-avatar {
+        @apply w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-sm;
+    }
+    
+    .notification-toast {
+        @apply fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .auction-detail-grid {
+            @apply grid-cols-1 gap-4;
+        }
+        
+        .auction-sidebar-card {
+            @apply mb-4;
+        }
+        
+        .bid-stats-grid {
+            @apply gap-2;
+        }
+        
+        .bid-stat-card {
+            @apply p-2;
+        }
+        
+        .current-bid-display {
+            @apply p-3;
+        }
+    }
+}

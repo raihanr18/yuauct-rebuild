@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Bid Form</title>
+</head>
+<body>
+    <h1>Test Bid Form</h1>
+    
+    <h2>Test 1: Route without middleware</h2>
+    <form action="http://127.0.0.1:8000/test-auctions/1/bid" method="POST">
+        <input type="number" name="bid_amount" value="1000000" required>
+        <button type="submit">Test Submit (No Middleware)</button>
+    </form>
+    
+    <h2>Test 2: Original route with middleware</h2>
+    <form action="http://127.0.0.1:8000/auctions/1/bid" method="POST">
+        <input type="number" name="bid_amount" value="1000000" required>
+        <button type="submit">Test Submit (With Middleware)</button>
+    </form>
+    
+    <h2>Debug Links</h2>
+    <a href="http://127.0.0.1:8000/debug-bid/1" target="_blank">Debug Route</a><br>
+    <a href="http://127.0.0.1:8000/test-simple" target="_blank">Test Simple Route</a><br>
+    <a href="http://127.0.0.1:8000/auctions/1" target="_blank">Auction Page</a><br>
+    
+</body>
+</html>

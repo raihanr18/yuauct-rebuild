@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Number Formatting</title>
+</head>
+<body>
+    <h3>Test Auto-format Input</h3>
+    <input type="text" id="test_input" placeholder="Ketik angka...">
+    <p>Formatted: <span id="formatted_output"></span></p>
+    <p>Raw Value: <span id="raw_output"></span></p>
+
+    <script>
+        const testInput = document.getElementById('test_input');
+        const formattedOutput = document.getElementById('formatted_output');
+        const rawOutput = document.getElementById('raw_output');
+
+        testInput.addEventListener('input', function(e) {
+            // Remove all non-numeric characters
+            let value = e.target.value.replace(/[^\d]/g, '');
+            
+            // Convert to number
+            let numericValue = parseInt(value) || 0;
+            
+            // Format with dots as thousand separators
+            let formattedValue = '';
+            if (numericValue > 0) {
+                formattedValue = numericValue.toLocaleString('id-ID');
+            }
+            
+            // Update display
+            e.target.value = formattedValue;
+            formattedOutput.textContent = formattedValue;
+            rawOutput.textContent = numericValue;
+        });
+    </script>
+</body>
+</html>
