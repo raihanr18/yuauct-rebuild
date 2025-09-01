@@ -21,7 +21,3 @@ Welcome to the rebuilt version of YuAuct, a full-featured online auction platfor
 ## Legacy Project Note
 
 This project is a rebuild of a prior version created with native PHP for a vocational school competition. The goal of this rebuild is to modernize the application, improve code quality, and leverage the powerful features of the Laravel framework.
-
-## Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated. Please feel free to fork the repo and create a pull request.
