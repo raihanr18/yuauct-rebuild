@@ -14,25 +14,29 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        // Create Admin
-        User::create([
-            'name' => 'Admin YuAUCT',
-            'username' => 'admin',
-            'email' => 'admin@yuauct.com',
-            'password' => Hash::make('password'),
-            'phone_number' => '081234567890',
-            'role' => 'admin',
-        ]);
+        // Create Admin (skip if already exists)
+        User::firstOrCreate(
+            ['email' => 'admin@yuauct.com'],
+            [
+                'name' => 'Admin YuAUCT',
+                'username' => 'admin',
+                'password' => Hash::make('password'),
+                'phone_number' => '081234567890',
+                'role' => 'admin',
+            ]
+        );
 
-        // Create Staff
-        User::create([
-            'name' => 'Staff Lelang',
-            'username' => 'staff',
-            'email' => 'staff@yuauct.com',
-            'password' => Hash::make('password'),
-            'phone_number' => '081234567891',
-            'role' => 'staff',
-        ]);
+        // Create Staff (skip if already exists)
+        User::firstOrCreate(
+            ['email' => 'staff@yuauct.com'],
+            [
+                'name' => 'Staff Lelang',
+                'username' => 'staff',
+                'password' => Hash::make('password'),
+                'phone_number' => '081234567891',
+                'role' => 'staff',
+            ]
+        );
 
         // Create Regular User
         User::create([

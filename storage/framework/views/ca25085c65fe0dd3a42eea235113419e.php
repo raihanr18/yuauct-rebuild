@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('title', 'Beranda'); ?>
 
 <?php $__env->startSection('content'); ?>
@@ -208,4 +206,4 @@ function countdown(endTime) {
 </script>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\laragon\www\yuauct-laravel\resources\views/home.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\Documents\Lab\yuauct-rebuild\resources\views/home.blade.php ENDPATH**/ ?>

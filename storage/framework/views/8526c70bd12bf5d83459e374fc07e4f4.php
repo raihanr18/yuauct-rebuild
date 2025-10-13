@@ -199,4 +199,4 @@
     </div>
 </body>
 </html>
-<?php /**PATH C:\laragon\www\yuauct-laravel\resources\views/layouts/app.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\Documents\Lab\yuauct-rebuild\resources\views/layouts/app.blade.php ENDPATH**/ ?>
